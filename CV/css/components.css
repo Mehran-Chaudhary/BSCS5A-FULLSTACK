@@ -1,0 +1,243 @@
+/* ===================================
+   Component Styles
+   =================================== */
+
+/* Contact Items */
+.contact-item a {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-item a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.contact-item a:hover::before {
+  width: 100%;
+}
+
+/* Section Dividers */
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+
+.section:last-child::after {
+  display: none;
+}
+
+/* Skill Items Enhancement */
+.skill-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #4299e1, #63b3ed);
+  border-radius: 0 12px 12px 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.skill-item {
+  position: relative;
+}
+
+.skill-item:hover::before {
+  opacity: 1;
+}
+
+/* Project Features List Enhancement */
+.project-features li {
+  transition: all 0.2s ease;
+}
+
+.project-features li:hover {
+  color: #2d3748;
+  padding-left: 2rem;
+}
+
+.project-features li:hover::before {
+  color: #3182ce;
+  transform: scale(1.2);
+}
+
+/* Achievement Items Enhancement */
+.achievement-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #48bb78, #68d391);
+  border-radius: 0 12px 12px 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.achievement-item {
+  position: relative;
+}
+
+.achievement-item:hover::before {
+  opacity: 1;
+}
+
+/* Language Level Badges */
+.language-level {
+  background: rgba(66, 153, 225, 0.1);
+  color: #3182ce;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(66, 153, 225, 0.2);
+  transition: all 0.2s ease;
+}
+
+.language-item:hover .language-level {
+  background: rgba(66, 153, 225, 0.2);
+  border-color: rgba(66, 153, 225, 0.3);
+}
+
+/* Interactive Elements */
+.education-item,
+.project-item,
+.experience-item,
+.achievement-item,
+.skill-item,
+.language-item {
+  cursor: default;
+}
+
+/* Loading Animation for Hover States */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.section-title::after {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Pulse Animation for Icons */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.skill-icon,
+.achievement-icon {
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-icon,
+.achievement-item:hover .achievement-icon {
+  animation: pulse 1s infinite;
+}
+
+/* Focus States for Accessibility */
+.contact-item a:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Enhanced Shadows */
+.cv-container {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 25px rgba(0, 0, 0, 0.1),
+    0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Gradient Overlays */
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4299e1, #63b3ed, #9f7aea, #ed64a6);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Status Indicators */
+.status {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.status::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #48bb78;
+  animation: pulse 2s infinite;
+}
+
+/* Print Component Adjustments */
+@media print {
+  .contact-item {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .skill-item,
+  .project-item,
+  .experience-item,
+  .achievement-item,
+  .language-item {
+    background: rgba(0, 0, 0, 0.02) !important;
+    border: 1px solid #ddd !important;
+  }
+
+  .section-title::after {
+    background: #333 !important;
+  }
+
+  .language-level {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #999 !important;
+    color: #333 !important;
+  }
+}

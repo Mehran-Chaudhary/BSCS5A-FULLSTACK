@@ -1,0 +1,369 @@
+/* ===================================
+   Responsive Design
+   =================================== */
+
+/* Mobile First Approach - Base styles are for mobile */
+
+/* Small Mobile Devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .cv-container {
+    margin: 0;
+    box-shadow: none;
+    min-height: 100vh;
+  }
+
+  .header {
+    padding: 2rem 1rem;
+  }
+
+  .name {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .title {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    gap: 0.5rem;
+  }
+
+  .contact-item {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .skill-item,
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .skill-icon,
+  .achievement-icon {
+    font-size: 2rem;
+  }
+
+  .project-item,
+  .experience-item {
+    padding: 1.25rem;
+  }
+
+  .language-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Large Mobile Devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .cv-container {
+    margin: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .header {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
+
+  .contact-info {
+    gap: 0.625rem;
+  }
+
+  .contact-item {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .main-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+
+  .languages-grid {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+}
+
+/* Tablet Devices (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .cv-container {
+    margin: 2rem auto;
+    max-width: 700px;
+  }
+
+  .header {
+    padding: 3rem 2rem;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    min-width: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .achievements-list {
+    gap: 1.25rem;
+  }
+}
+
+/* Desktop Devices (1025px and up) */
+@media screen and (min-width: 1025px) {
+  .cv-container {
+    margin: 3rem auto;
+    max-width: 800px;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    min-width: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .cv-container {
+    max-width: 900px;
+    margin: 4rem auto;
+  }
+
+  .header {
+    padding: 4rem 3rem;
+  }
+
+  .main-content {
+    padding: 4rem 3rem;
+  }
+
+  .name {
+    font-size: 3.5rem;
+  }
+
+  .title {
+    font-size: 1.375rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .header::before {
+    background-size: 50px 50px;
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .name {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  .section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Touch Device Enhancements */
+@media (hover: none) and (pointer: coarse) {
+  .contact-item,
+  .skill-item,
+  .project-item,
+  .experience-item,
+  .achievement-item,
+  .language-item {
+    transition: none;
+  }
+
+  .contact-item:hover,
+  .skill-item:hover,
+  .project-item:hover,
+  .experience-item:hover,
+  .achievement-item:hover,
+  .language-item:hover {
+    transform: none;
+  }
+
+  .contact-item:active,
+  .skill-item:active,
+  .project-item:active,
+  .experience-item:active,
+  .achievement-item:active,
+  .language-item:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .header::after {
+    animation: none;
+  }
+
+  .skill-item:hover .skill-icon,
+  .achievement-item:hover .achievement-icon {
+    animation: none;
+  }
+
+  .status::before {
+    animation: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .cv-container {
+    background: #1a202c;
+    color: #e2e8f0;
+  }
+
+  .section-title {
+    color: #e2e8f0;
+  }
+
+  .degree,
+  .project-title,
+  .position,
+  .skill-name,
+  .language-name {
+    color: #e2e8f0;
+  }
+
+  .institution,
+  .status,
+  .project-description,
+  .experience-description,
+  .achievement-text {
+    color: #cbd5e0;
+  }
+
+  .skill-item,
+  .project-item,
+  .experience-item,
+  .achievement-item,
+  .language-item,
+  .education-item {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .skill-item:hover,
+  .project-item:hover,
+  .experience-item:hover,
+  .achievement-item:hover,
+  .language-item:hover,
+  .education-item:hover {
+    background: #374151;
+    border-color: #6b7280;
+  }
+
+  .footer {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .footer-text {
+    color: #9ca3af;
+  }
+}
