@@ -32,7 +32,7 @@ body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .title {
@@ -347,16 +347,4 @@ tbody tr:hover {
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
-}
-
-/* Color Coding Legend */
-.timetable-container::before {
-  content: "🔵 Theory Classes  🟢 Lab Classes  🟠 Break Time";
-  display: block;
-  text-align: center;
-  padding: 10px;
-  background: #f8f9fa;
-  font-size: 12px;
-  color: #666;
-  border-bottom: 1px solid #dee2e6;
 }
