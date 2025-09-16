@@ -14,24 +14,8 @@
 /* Header Layout */
 .header {
   text-align: center;
-  padding: 40px 60px 30px 60px;
+  padding: 30px 60px 25px 60px;
   border-bottom: 1px solid #e0e0e0;
-}
-
-.profile-photo-container {
-  margin-bottom: 20px;
-}
-
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 4px;
-  object-fit: cover;
-  border: 1px solid #ddd;
-}
-
-.header-info {
-  text-align: center;
 }
 
 .contact-info {
