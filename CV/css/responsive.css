@@ -7,117 +7,85 @@
 /* Small Mobile Devices (320px - 480px) */
 @media screen and (max-width: 480px) {
   .cv-container {
-    margin: 0;
-    box-shadow: none;
-    min-height: 100vh;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
   .header {
-    padding: 2rem 1rem;
+    padding: 20px 20px 15px 20px;
+  }
+
+  .profile-photo {
+    width: 80px;
+    height: 80px;
   }
 
   .name {
-    font-size: 2.25rem;
-    line-height: 1.2;
+    font-size: 18pt;
   }
 
   .title {
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-info {
-    gap: 0.5rem;
+    font-size: 10pt;
   }
 
   .contact-item {
-    padding: 0.625rem 1rem;
-    font-size: 0.875rem;
-    flex-direction: column;
+    font-size: 9pt;
     text-align: center;
-    gap: 0.5rem;
   }
 
   .main-content {
-    padding: 2rem 1rem;
-  }
-
-  .section {
-    margin-bottom: 2rem;
+    padding: 0 20px 20px 20px;
   }
 
   .section-title {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 10pt;
   }
 
-  .skill-item,
-  .achievement-item {
+  .experience-header,
+  .education-header {
     flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
+    align-items: flex-start;
   }
 
-  .skill-icon,
-  .achievement-icon {
-    font-size: 2rem;
+  .date-location {
+    text-align: left;
+    margin-top: 2px;
   }
 
-  .project-item,
-  .experience-item {
-    padding: 1.25rem;
-  }
-
-  .language-item {
+  .skill-category {
     flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
+    align-items: flex-start;
   }
 
-  .footer {
-    padding: 1.5rem 1rem;
+  .skill-category-title {
+    margin-bottom: 2px;
   }
 }
 
 /* Large Mobile Devices (481px - 768px) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .cv-container {
-    margin: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .header {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .name {
-    font-size: 2.5rem;
-  }
-
-  .title {
-    font-size: 1.125rem;
-  }
-
-  .contact-info {
-    gap: 0.625rem;
-  }
-
-  .contact-item {
-    padding: 0.75rem 1.25rem;
+    padding: 30px 40px 20px 40px;
   }
 
   .main-content {
-    padding: 2.5rem 1.5rem;
+    padding: 0 40px 30px 40px;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 0.875rem;
+  .experience-header,
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .languages-grid {
-    grid-template-columns: 1fr;
-    gap: 0.875rem;
+  .date-location {
+    text-align: left;
+    margin-top: 2px;
   }
 }
 
@@ -264,26 +232,7 @@
   .experience-item,
   .achievement-item,
   .language-item {
-    transition: none;
-  }
-
-  .contact-item:hover,
-  .skill-item:hover,
-  .project-item:hover,
-  .experience-item:hover,
-  .achievement-item:hover,
-  .language-item:hover {
-    transform: none;
-  }
-
-  .contact-item:active,
-  .skill-item:active,
-  .project-item:active,
-  .experience-item:active,
-  .achievement-item:active,
-  .language-item:active {
-    transform: scale(0.98);
-    transition: transform 0.1s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -295,19 +244,6 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-
-  .header::after {
-    animation: none;
-  }
-
-  .skill-item:hover .skill-icon,
-  .achievement-item:hover .achievement-icon {
-    animation: none;
-  }
-
-  .status::before {
-    animation: none;
   }
 }
 
