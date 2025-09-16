@@ -1,0 +1,129 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  font-family: var(--font-family-display);
+}
+
+.calculator-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.calculator {
+  background: var(--primary-bg);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-heavy);
+  padding: var(--spacing-lg);
+  width: 100%;
+  max-width: 350px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.display-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.display {
+  background: var(--display-bg);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  text-align: right;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow-inset);
+}
+
+.controls-section {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  align-items: stretch;
+}
+
+.btn-wide {
+  grid-column: span 2;
+}
+
+.btn-tall {
+  grid-row: span 2;
+  align-self: stretch;
+}
+
+@media (max-width: 480px) {
+  .calculator-container {
+    padding: var(--spacing-sm);
+  }
+
+  .calculator {
+    max-width: 100%;
+    padding: var(--spacing-md);
+  }
+
+  .display {
+    padding: var(--spacing-md);
+    min-height: 80px;
+  }
+
+  .button-row {
+    gap: var(--spacing-xs);
+  }
+
+  .controls-section {
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+
+  .calculator {
+    padding: var(--spacing-sm);
+  }
+
+  .display {
+    padding: var(--spacing-sm);
+    min-height: 70px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+
+  .calculator {
+    max-width: 600px;
+  }
+
+  .display {
+    min-height: 60px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .calculator {
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .display {
+    border: 0.5px solid rgba(255, 255, 255, 0.05);
+  }
+}
