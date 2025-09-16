@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSCS5A - Fullstack Lab Tasks</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+        color: #333;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .header {
+        margin-bottom: 40px;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        font-weight: 300;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .project-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #2c3e50;
+      }
+
+      .project-description {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .footer {
+        color: white;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-top: 30px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .project-card {
+          padding: 25px 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 15px;
+        }
+
+        .header h1 {
+          font-size: 1.8rem;
+        }
+
+        .header p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>BSCS5A - Fullstack Lab Tasks</h1>
+        <p>Air University, Islamabad • Fall 2024 • Mehran Akhtar</p>
+      </header>
+
+      <div class="projects-grid">
+        <a href="CALCULATOR/" class="project-card">
+          <span class="project-icon">🧮</span>
+          <h2 class="project-title">Professional Calculator</h2>
+          <p class="project-description">
+            Modern calculator with keyboard support, responsive design, and
+            clean UI built with vanilla JavaScript.
+          </p>
+        </a>
+
+        <a href="CV/" class="project-card">
+          <span class="project-icon">📊</span>
+          <h2 class="project-title">Professional CV</h2>
+          <p class="project-description">
+            Clean, single-column digital resume optimized for both web viewing
+            and professional printing.
+          </p>
+        </a>
+
+        <a href="TIMETABLE/" class="project-card">
+          <span class="project-icon">📅</span>
+          <h2 class="project-title">Class Timetable</h2>
+          <p class="project-description">
+            Interactive BSCS-V-A schedule with color-coded subjects, faculty
+            details, and mobile-responsive design.
+          </p>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <p>Built with HTML5, CSS3 & JavaScript • GitHub Pages Ready</p>
+      </footer>
+    </div>
+  </body>
+</html>
