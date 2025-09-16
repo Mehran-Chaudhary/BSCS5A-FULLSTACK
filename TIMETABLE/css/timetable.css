@@ -1,0 +1,339 @@
+/* ===================================
+   Professional Timetable Styles
+   =================================== */
+
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+/* Container */
+.timetable-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Timetable Wrapper */
+.timetable-wrapper {
+  overflow-x: auto;
+  padding: 0;
+}
+
+/* Table Styles */
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+/* Header Row */
+.time-header {
+  background: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.time-header th {
+  padding: 15px 8px;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  color: #495057;
+  border-right: 1px solid #dee2e6;
+  white-space: nowrap;
+}
+
+.day-column {
+  background: #e9ecef;
+  min-width: 60px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.time-slot {
+  min-width: 140px;
+  font-size: 11px;
+}
+
+/* Table Body */
+tbody tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* Day Column */
+.day {
+  background: #e9ecef;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px 15px;
+  color: #495057;
+  border-right: 2px solid #dee2e6;
+  vertical-align: middle;
+}
+
+/* Subject Cells */
+.subject {
+  padding: 12px 8px;
+  vertical-align: top;
+  border-right: 1px solid #dee2e6;
+  position: relative;
+  min-height: 80px;
+}
+
+/* Theory Classes */
+.subject.theory {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  border-left: 4px solid #2196f3;
+}
+
+/* Lab Classes */
+.subject.lab {
+  background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+  border-left: 4px solid #4caf50;
+}
+
+/* Break */
+.break {
+  background: linear-gradient(135deg, #fff3e0 0%, #fce4ec 100%);
+  text-align: center;
+  font-weight: 600;
+  color: #ff5722;
+  vertical-align: middle;
+  border-right: 1px solid #dee2e6;
+  border-left: 4px solid #ff5722;
+}
+
+/* Empty Cells */
+.empty {
+  background: #fafafa;
+  border-right: 1px solid #dee2e6;
+  min-height: 80px;
+}
+
+/* Subject Content */
+.subject-name {
+  font-weight: 600;
+  font-size: 12px;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+
+.subject-code {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.room {
+  font-size: 10px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.instructor {
+  font-size: 10px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #dee2e6;
+  color: #6c757d;
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .timetable-container {
+    margin: 10px;
+    border-radius: 4px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .time-slot {
+    min-width: 120px;
+    font-size: 10px;
+  }
+
+  .subject {
+    padding: 8px 6px;
+    min-height: 70px;
+  }
+
+  .subject-name {
+    font-size: 11px;
+  }
+
+  .subject-code {
+    font-size: 10px;
+  }
+
+  .room,
+  .instructor {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timetable-container {
+    margin: 5px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .time-header th {
+    padding: 10px 4px;
+    font-size: 10px;
+  }
+
+  .time-slot {
+    min-width: 100px;
+  }
+
+  .day {
+    padding: 15px 8px;
+    font-size: 14px;
+  }
+
+  .subject {
+    padding: 6px 4px;
+    min-height: 60px;
+  }
+
+  .subject-name {
+    font-size: 10px;
+  }
+
+  .subject-code,
+  .room,
+  .instructor {
+    font-size: 8px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  .timetable-container {
+    box-shadow: none;
+    margin: 0;
+    max-width: none;
+  }
+
+  .header {
+    background: #333 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .subject.theory {
+    background: #f0f0f0 !important;
+    border-left: 2px solid #333 !important;
+  }
+
+  .subject.lab {
+    background: #f5f5f5 !important;
+    border-left: 2px solid #666 !important;
+  }
+
+  .break {
+    background: #e0e0e0 !important;
+    border-left: 2px solid #999 !important;
+  }
+
+  .day {
+    background: #ddd !important;
+  }
+
+  .time-header {
+    background: #eee !important;
+  }
+}
+
+/* Hover Effects */
+.subject:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Color Coding Legend */
+.timetable-container::before {
+  content: "🔵 Theory Classes  🟢 Lab Classes  🟠 Break Time";
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: #f8f9fa;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #dee2e6;
+}
