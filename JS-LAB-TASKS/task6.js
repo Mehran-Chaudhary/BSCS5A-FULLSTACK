@@ -1,13 +1,10 @@
-// Task 6: Sum of Multiples of x or y below z
 function task6(x = 3, y = 5, z = 10) {
   let output = "";
 
-  // Function to find sum of all multiples of x or y below z
   function sumOfMultiples(x, y, z) {
     let multiples = [];
     let sum = 0;
 
-    // Find all numbers below z that are multiples of x or y
     for (let i = 1; i < z; i++) {
       if (i % x === 0 || i % y === 0) {
         multiples.push(i);
@@ -21,7 +18,6 @@ function task6(x = 3, y = 5, z = 10) {
     };
   }
 
-  // Validate inputs
   if (x <= 0 || y <= 0 || z <= 0) {
     output += "=== SUM OF MULTIPLES ===\n\n";
     output += "Error: All values (x, y, z) must be positive integers\n";
@@ -29,14 +25,11 @@ function task6(x = 3, y = 5, z = 10) {
     return output;
   }
 
-  // Calculate result
   let result = sumOfMultiples(x, y, z);
 
-  // Display results
   output += "=== SUM OF MULTIPLES ===\n\n";
   output += `Find sum of all multiples of ${x} or ${y} below ${z}\n\n`;
 
-  // Show the problem like the example
   if (x === 3 && y === 5 && z === 10) {
     output += "Example from problem statement:\n";
     output += "Natural numbers below 10 that are multiples of 3 or 5:\n";
@@ -44,7 +37,6 @@ function task6(x = 3, y = 5, z = 10) {
     output += `Natural numbers below ${z} that are multiples of ${x} or ${y}:\n`;
   }
 
-  // Show individual multiples with their factors
   let multipleDetails = [];
   for (let num of result.multiples) {
     let factors = [];
@@ -55,14 +47,12 @@ function task6(x = 3, y = 5, z = 10) {
 
   output += result.multiples.join(", ") + "\n\n";
 
-  // Show detailed breakdown
   output += "Detailed breakdown:\n";
   multipleDetails.forEach((detail) => {
     output += `• ${detail}\n`;
   });
   output += "\n";
 
-  // Show calculation
   if (result.multiples.length > 0) {
     output += `Sum calculation: ${result.multiples.join(" + ")} = ${
       result.sum
@@ -71,7 +61,6 @@ function task6(x = 3, y = 5, z = 10) {
     output += "No multiples found\n\n";
   }
 
-  // Show step-by-step checking
   output += "Step-by-step checking:\n";
   for (let i = 1; i < z; i++) {
     let isMultipleOfX = i % x === 0;
@@ -93,7 +82,6 @@ function task6(x = 3, y = 5, z = 10) {
   }
   output += "\n";
 
-  // Show alternative test cases
   output += "Additional test cases:\n";
   let testCases = [
     { x: 3, y: 5, z: 20 },
@@ -107,10 +95,8 @@ function task6(x = 3, y = 5, z = 10) {
     output += `[${testResult.multiples.join(", ")}] = ${testResult.sum}\n`;
   });
 
-  // Final result
   output += `\n🎯 FINAL ANSWER: ${result.sum}\n`;
 
-  // Log to console
   console.log("=== Task 6: Sum of Multiples ===");
   console.log(`Parameters: x=${x}, y=${y}, z=${z}`);
   console.log("Multiples found:", result.multiples);
@@ -122,7 +108,6 @@ function task6(x = 3, y = 5, z = 10) {
   return output;
 }
 
-// For standalone testing
 if (typeof window === "undefined") {
   console.log("Testing with default values (3, 5, 10):");
   task6(3, 5, 10);

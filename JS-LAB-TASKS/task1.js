@@ -1,49 +1,36 @@
-// Task 1: Biography using variables and objects
 function task1() {
-  // Using 'var' to store biography in variables with appropriate primitive types
-  var fullName = "Ahmad Hassan"; // string
-  var age = 20; // number
-  var isStudent = true; // boolean
-  var gpa = 3.85; // number (float)
-  var hobbies = "Programming, Reading, Gaming"; // string
+  var fullName = "Ahmad Hassan";
+  var age = 20;
+  var isStudent = true;
+  var gpa = 3.85;
+  var hobbies = "Programming, Reading, Gaming";
 
-  // Creating JS Object for biography with nested objects
   var biography = {
     name: fullName,
     age: age,
     isStudent: isStudent,
     gpa: gpa,
-
-    // Nested object for address
     address: {
       street: "123 University Road",
       city: "Islamabad",
       country: "Pakistan",
       postalCode: "44000",
     },
-
-    // Nested object for degree programs
     degreeProgram: {
       current: "Bachelor of Science in Computer Science",
       semester: "5th Semester",
       university: "Air University",
       expectedGraduation: "2027",
     },
-
-    // Additional nested object for contact information
     contact: {
       email: "ahmad.hassan@student.au.edu.pk",
       phone: "+92-300-1234567",
       linkedin: "linkedin.com/in/ahmad-hassan",
     },
-
-    // Array of skills
     skills: ["JavaScript", "Python", "HTML/CSS", "React", "Node.js"],
-
     hobbies: hobbies,
   };
 
-  // Print biography on console (formatted, not entire object)
   let output = "";
   output += "=== PERSONAL BIOGRAPHY ===\n\n";
   output += `Name: ${biography.name}\n`;
@@ -74,7 +61,6 @@ function task1() {
 
   output += `🎯 HOBBIES: ${biography.hobbies}\n\n`;
 
-  // Also log to browser console
   console.log("=== Task 1: Biography ===");
   console.log("Variables used:");
   console.log("fullName (string):", fullName);
@@ -88,7 +74,6 @@ function task1() {
   return output;
 }
 
-// For standalone testing
 if (typeof window === "undefined") {
   task1();
 }

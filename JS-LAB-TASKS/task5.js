@@ -1,8 +1,6 @@
-// Task 5: Math Functions (abs, ceil, floor) with Variable Arguments
 function task5() {
   let output = "";
 
-  // Abs function that can work on 0-N arguments
   function abs(...args) {
     if (args.length === 0) {
       return 0;
@@ -13,7 +11,6 @@ function task5() {
     return args.map((num) => Math.abs(num));
   }
 
-  // Ceil function that can work on 0-N arguments
   function ceil(...args) {
     if (args.length === 0) {
       return 0;
@@ -24,7 +21,6 @@ function task5() {
     return args.map((num) => Math.ceil(num));
   }
 
-  // Floor function that can work on 0-N arguments
   function floor(...args) {
     if (args.length === 0) {
       return 0;
@@ -35,24 +31,20 @@ function task5() {
     return args.map((num) => Math.floor(num));
   }
 
-  // Test numbers
   let testNumbers = [4.7, -3.2, 5.1, -7.9, 0.5, -0.5];
 
   output += "=== MATH FUNCTIONS IMPLEMENTATION ===\n\n";
 
-  // Test 1: No arguments
   output += "Testing with NO ARGUMENTS:\n";
   output += `abs() → ${abs()}\n`;
   output += `ceil() → ${ceil()}\n`;
   output += `floor() → ${floor()}\n\n`;
 
-  // Test 2: Single argument
   output += "Testing with SINGLE ARGUMENT (4.7):\n";
   output += `abs(4.7) → ${abs(4.7)} (type: ${typeof abs(4.7)})\n`;
   output += `ceil(4.7) → ${ceil(4.7)} (type: ${typeof ceil(4.7)})\n`;
   output += `floor(4.7) → ${floor(4.7)} (type: ${typeof floor(4.7)})\n\n`;
 
-  // Test 3: Multiple arguments
   output += "Testing with MULTIPLE ARGUMENTS:\n";
   output += `Input numbers: [${testNumbers.join(", ")}]\n\n`;
 
@@ -66,7 +58,6 @@ function task5() {
     ", "
   )}]\n\n`;
 
-  // Detailed comparison table
   output += "DETAILED COMPARISON TABLE:\n";
   output += "Number  | abs()  | ceil() | floor()\n";
   output += "--------|--------|--------|--------\n";
@@ -81,7 +72,6 @@ function task5() {
 
   output += "\n";
 
-  // Explanation of functions
   output += "FUNCTION EXPLANATIONS:\n";
   output += "• abs(): Returns absolute value (distance from zero)\n";
   output += "  - abs(-5) = 5, abs(5) = 5\n";
@@ -90,7 +80,6 @@ function task5() {
   output += "• floor(): Rounds DOWN to nearest integer (floor)\n";
   output += "  - floor(4.9) = 4, floor(-4.1) = -5\n\n";
 
-  // Edge cases
   output += "EDGE CASES:\n";
   let edgeCases = [0, -0, 0.5, -0.5, 1.0, -1.0];
   output += `Testing: [${edgeCases.join(", ")}]\n`;
@@ -98,7 +87,6 @@ function task5() {
   output += `ceil(): [${ceil(...edgeCases).join(", ")}]\n`;
   output += `floor(): [${floor(...edgeCases).join(", ")}]\n\n`;
 
-  // Implementation details
   output += "IMPLEMENTATION FEATURES:\n";
   output += "✓ Uses rest parameters (...args) for variable arguments\n";
   output += "✓ Returns 0 when no arguments provided\n";
@@ -106,7 +94,6 @@ function task5() {
   output += "✓ Returns array for multiple arguments\n";
   output += "✓ Leverages built-in Math functions for accuracy\n";
 
-  // Log to console
   console.log("=== Task 5: Math Functions ===");
   console.log("abs():", abs());
   console.log("abs(4.7):", abs(4.7));
@@ -120,11 +107,9 @@ function task5() {
   return output;
 }
 
-// Custom test function for user input
 function task5Custom(numbers = []) {
   let output = "";
 
-  // Same functions as above
   function abs(...args) {
     if (args.length === 0) return 0;
     if (args.length === 1) return Math.abs(args[0]);
@@ -183,7 +168,6 @@ function task5Custom(numbers = []) {
   return output;
 }
 
-// For standalone testing
 if (typeof window === "undefined") {
   task5();
 }
