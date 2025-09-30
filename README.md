@@ -25,6 +25,7 @@ BSCS5A - FULLSTACK LAB TASKS/
 ├── 📊 CV/                          # Professional CV Website
 ├── 🧮 CALCULATOR/                  # Professional Calculator App
 ├── 📅 TIMETABLE/                   # Interactive Class Schedule
+├── ⚡ JS-LAB-TASKS/                # JavaScript Programming Exercises
 ├── 📋 README.md                    # This documentation
 └── 🔧 Additional Projects          # Future lab tasks & assignments
 ```
@@ -99,6 +100,38 @@ BSCS5A - FULLSTACK LAB TASKS/
 - **Management**: Introduction to Management
 - **Lab Sessions**: 2h 40min practical sessions
 - **Faculty Details**: Complete instructor information
+
+---
+
+### 4. ⚡ **JavaScript Lab Tasks**
+
+**Tech Stack**: HTML5, CSS3, Vanilla JavaScript  
+**Purpose**: Interactive programming exercises and algorithm implementation
+
+**Features:**
+
+- 6 comprehensive JavaScript tasks
+- Interactive testing interface
+- Real-time code execution
+- Custom input validation
+- Educational explanations
+- Browser console integration
+
+**Task Coverage:**
+
+- Variables and object manipulation
+- Prime number algorithms
+- Function implementations
+- Mathematical operations
+- Array processing
+- Algorithm optimization
+
+**Highlights:**
+
+- Modern UI with live feedback
+- Step-by-step explanations
+- Multiple test scenarios
+- Educational value focus
 
 ## 🎓 Academic Information
 

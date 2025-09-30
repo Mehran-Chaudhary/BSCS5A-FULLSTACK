@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Lab Tasks - BSCS5A</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .nav-link {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .tasks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        padding: 30px;
+      }
+
+      .task-card {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 25px;
+        border-left: 5px solid #3498db;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .task-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .task-card h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .task-card p {
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .btn {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      .btn:hover {
+        background: linear-gradient(135deg, #2980b9, #2471a3);
+        transform: translateY(-2px);
+      }
+
+      .output {
+        background: #2c3e50;
+        color: #ecf0f1;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 15px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        white-space: pre-wrap;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .output:empty {
+        display: none;
+      }
+
+      .input-group {
+        margin: 10px 0;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .input-group input:focus {
+        outline: none;
+        border-color: #3498db;
+      }
+
+      @media (max-width: 768px) {
+        .nav-link {
+          position: static;
+          display: inline-block;
+          margin-bottom: 20px;
+        }
+
+        .header {
+          padding-top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="../" class="nav-link">← Back to Main</a>
+        <h1>JavaScript Lab Tasks</h1>
+        <p>BSCS5A - Full Stack Development Lab</p>
+      </div>
+
+      <div class="tasks-grid">
+        <!-- Task 1: Biography -->
+        <div class="task-card">
+          <h3>Task 1: Biography</h3>
+          <p>
+            Create a biography using variables and objects with appropriate
+            primitive types.
+          </p>
+          <button class="btn" onclick="runTask1()">Run Biography Task</button>
+          <div id="output1" class="output"></div>
+        </div>
+
+        <!-- Task 2: Prime Numbers -->
+        <div class="task-card">
+          <h3>Task 2: Next Prime Number</h3>
+          <p>
+            Find the prime number after a given prime number using loops and let
+            keyword.
+          </p>
+          <div class="input-group">
+            <label for="primeInput">Enter a prime number:</label>
+            <input
+              type="number"
+              id="primeInput"
+              value="11"
+              placeholder="Enter a prime number"
+            />
+          </div>
+          <button class="btn" onclick="runTask2()">Find Next Prime</button>
+          <div id="output2" class="output"></div>
+        </div>
+
+        <!-- Task 3: Phone Number -->
+        <div class="task-card">
+          <h3>Task 3: Phone Number Formatter</h3>
+          <p>
+            Format an array of 10 integers (0-9) into a phone number string.
+          </p>
+          <div class="input-group">
+            <label for="phoneInput">Enter 10 digits (e.g., 1234567890):</label>
+            <input
+              type="text"
+              id="phoneInput"
+              value="1234567890"
+              placeholder="Enter 10 digits"
+            />
+          </div>
+          <button class="btn" onclick="runTask3()">Format Phone Number</button>
+          <div id="output3" class="output"></div>
+        </div>
+
+        <!-- Task 4: RoundMe Function -->
+        <div class="task-card">
+          <h3>Task 4: RoundMe Function</h3>
+          <p>
+            Create a roundMe() function that works with 0-N arguments and
+            returns rounded values.
+          </p>
+          <button class="btn" onclick="runTask4()">Test RoundMe()</button>
+          <button class="btn" onclick="runTask4Custom()">Custom Test</button>
+          <div class="input-group">
+            <label for="roundInput">Enter numbers (comma separated):</label>
+            <input
+              type="text"
+              id="roundInput"
+              placeholder="e.g., 4.7, 3.2, 5.8"
+            />
+          </div>
+          <div id="output4" class="output"></div>
+        </div>
+
+        <!-- Task 5: Math Functions -->
+        <div class="task-card">
+          <h3>Task 5: Math Functions (abs, ceil, floor)</h3>
+          <p>
+            Implement custom abs, ceil, and floor methods like roundMe function.
+          </p>
+          <button class="btn" onclick="runTask5()">Test Math Functions</button>
+          <button class="btn" onclick="runTask5Custom()">Custom Test</button>
+          <div class="input-group">
+            <label for="mathInput">Enter numbers (comma separated):</label>
+            <input
+              type="text"
+              id="mathInput"
+              placeholder="e.g., -4.7, 3.2, -5.8"
+            />
+          </div>
+          <div id="output5" class="output"></div>
+        </div>
+
+        <!-- Task 6: Multiples Sum -->
+        <div class="task-card">
+          <h3>Task 6: Sum of Multiples</h3>
+          <p>Find the sum of all multiples of x or y below z.</p>
+          <div class="input-group">
+            <label for="xInput">First multiple (x):</label>
+            <input type="number" id="xInput" value="3" placeholder="Enter x" />
+          </div>
+          <div class="input-group">
+            <label for="yInput">Second multiple (y):</label>
+            <input type="number" id="yInput" value="5" placeholder="Enter y" />
+          </div>
+          <div class="input-group">
+            <label for="zInput">Upper limit (z):</label>
+            <input type="number" id="zInput" value="10" placeholder="Enter z" />
+          </div>
+          <button class="btn" onclick="runTask6()">Calculate Sum</button>
+          <div id="output6" class="output"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include all task JavaScript files -->
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+    <script src="task3.js"></script>
+    <script src="task4.js"></script>
+    <script src="task5.js"></script>
+    <script src="task6.js"></script>
+
+    <script>
+      // Helper function to display output
+      function displayOutput(taskNumber, content) {
+        const outputElement = document.getElementById(`output${taskNumber}`);
+        outputElement.textContent = content;
+        outputElement.style.display = "block";
+      }
+
+      // Task runners
+      function runTask1() {
+        const output = task1();
+        displayOutput(1, output);
+      }
+
+      function runTask2() {
+        const primeInput = parseInt(
+          document.getElementById("primeInput").value
+        );
+        if (isNaN(primeInput)) {
+          displayOutput(2, "Please enter a valid number");
+          return;
+        }
+        const output = task2(primeInput);
+        displayOutput(2, output);
+      }
+
+      function runTask3() {
+        const phoneInput = document.getElementById("phoneInput").value;
+        const output = task3(phoneInput);
+        displayOutput(3, output);
+      }
+
+      function runTask4() {
+        const output = task4();
+        displayOutput(4, output);
+      }
+
+      function runTask4Custom() {
+        const input = document.getElementById("roundInput").value;
+        const numbers = input
+          .split(",")
+          .map((n) => parseFloat(n.trim()))
+          .filter((n) => !isNaN(n));
+        const output = task4Custom(numbers);
+        displayOutput(4, output);
+      }
+
+      function runTask5() {
+        const output = task5();
+        displayOutput(5, output);
+      }
+
+      function runTask5Custom() {
+        const input = document.getElementById("mathInput").value;
+        const numbers = input
+          .split(",")
+          .map((n) => parseFloat(n.trim()))
+          .filter((n) => !isNaN(n));
+        const output = task5Custom(numbers);
+        displayOutput(5, output);
+      }
+
+      function runTask6() {
+        const x = parseInt(document.getElementById("xInput").value);
+        const y = parseInt(document.getElementById("yInput").value);
+        const z = parseInt(document.getElementById("zInput").value);
+        const output = task6(x, y, z);
+        displayOutput(6, output);
+      }
+    </script>
+  </body>
+</html>
