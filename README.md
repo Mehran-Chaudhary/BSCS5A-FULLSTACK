@@ -26,6 +26,7 @@ BSCS5A - FULLSTACK LAB TASKS/
 ├── 🧮 CALCULATOR/                  # Professional Calculator App
 ├── 📅 TIMETABLE/                   # Interactive Class Schedule
 ├── ⚡ JS-LAB-TASKS/                # JavaScript Programming Exercises
+├── ✅ TASK-MANAGER/                # Task Management System
 ├── 📋 README.md                    # This documentation
 └── 🔧 Additional Projects          # Future lab tasks & assignments
 ```
@@ -132,6 +133,44 @@ BSCS5A - FULLSTACK LAB TASKS/
 - Step-by-step explanations
 - Multiple test scenarios
 - Educational value focus
+
+---
+
+### 5. ✅ **Task Management System**
+
+**Tech Stack**: HTML5, CSS3, Vanilla JavaScript (ES6+)  
+**Purpose**: Professional productivity tool for task organization
+
+**Features:**
+
+- ✅ Add, edit, and delete tasks
+- ☑️ Mark tasks as complete/incomplete
+- 🔍 Smart filtering (All, Active, Completed)
+- 💾 Persistent storage with localStorage
+- 📊 Real-time task statistics
+- 🧹 Bulk clear completed tasks
+- ⌨️ Keyboard shortcuts support
+
+**Technical Highlights:**
+
+- Object-oriented JavaScript architecture
+- Custom modal system for editing
+- CSS custom properties for theming
+- Modular CSS organization
+- Event delegation pattern
+- State management implementation
+- Data persistence layer
+- XSS protection
+
+**Design Features:**
+
+- Minimalist, professional UI
+- Smooth animations and transitions
+- Fully responsive design
+- Touch-friendly mobile interface
+- Color-coded task states
+- Empty state handling
+- Confirmation dialogs
 
 ## 🎓 Academic Information
 
