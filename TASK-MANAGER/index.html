@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Management System - BSCS5A</title>
+    <title>Advanced Task Manager - BSCS5A</title>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -15,100 +15,370 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar">
-      <a href="../" class="nav-link">← Back to Main</a>
-      <h1 class="nav-title">Task Manager</h1>
+      <div class="nav-content">
+        <a href="../" class="nav-link">
+          <svg
+            class="nav-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Back to Main
+        </a>
+        <h1 class="nav-title">
+          <span class="nav-title-icon">✨</span>
+          Advanced Task Manager
+        </h1>
+        <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+          <svg
+            class="theme-icon sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg
+            class="theme-icon moon-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </div>
     </nav>
 
     <!-- Main Container -->
     <main class="container">
       <!-- Header Section -->
       <header class="header">
-        <h1 class="header-title">Task Management System</h1>
-        <p class="header-subtitle">Organize your work efficiently</p>
+        <!-- Stats Cards -->
+        <div class="stats-cards">
+          <div class="stat-card stat-card-all">
+            <div class="stat-icon">📊</div>
+            <div class="stat-info">
+              <span class="stat-value" id="statAll">0</span>
+              <span class="stat-label">Total Tasks</span>
+            </div>
+          </div>
+          <div class="stat-card stat-card-active">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-info">
+              <span class="stat-value" id="statActive">0</span>
+              <span class="stat-label">Active</span>
+            </div>
+          </div>
+          <div class="stat-card stat-card-completed">
+            <div class="stat-icon">✅</div>
+            <div class="stat-info">
+              <span class="stat-value" id="statCompleted">0</span>
+              <span class="stat-label">Completed</span>
+            </div>
+          </div>
+        </div>
       </header>
 
-      <!-- Task Input Section -->
-      <section class="task-input-section">
-        <div class="input-container">
-          <input
-            type="text"
-            id="taskInput"
-            class="task-input"
-            placeholder="What needs to be done?"
-            autocomplete="off"
-          />
-          <button id="addTaskBtn" class="btn btn-primary">
-            <span class="btn-icon">+</span>
-            <span class="btn-text">Add Task</span>
-          </button>
-        </div>
+      <!-- Main Content Grid -->
+      <div class="main-content-grid">
+        <!-- Task Input Section (Left Column) -->
+        <section class="task-input-section">
+          <h2 class="section-title">
+            <span class="section-icon">➕</span>
+            Create New Task
+          </h2>
+          <div class="input-wrapper">
+            <div class="input-group">
+              <div class="input-icon">📝</div>
+              <input
+                type="text"
+                id="taskInput"
+                class="task-input"
+                placeholder="What's on your mind?"
+                autocomplete="off"
+              />
+            </div>
 
-        <!-- Filter Buttons -->
-        <div class="filter-container">
-          <button class="filter-btn active" data-filter="all">
-            All <span class="count" id="countAll">0</span>
-          </button>
-          <button class="filter-btn" data-filter="active">
-            Active <span class="count" id="countActive">0</span>
-          </button>
-          <button class="filter-btn" data-filter="completed">
-            Completed <span class="count" id="countCompleted">0</span>
-          </button>
-        </div>
-      </section>
+            <div class="priority-selector">
+              <label class="priority-label">Priority:</label>
+              <div class="priority-options">
+                <button class="priority-btn" data-priority="low">
+                  <span class="priority-dot priority-low"></span>
+                  Low
+                </button>
+                <button class="priority-btn active" data-priority="medium">
+                  <span class="priority-dot priority-medium"></span>
+                  Medium
+                </button>
+                <button class="priority-btn" data-priority="high">
+                  <span class="priority-dot priority-high"></span>
+                  High
+                </button>
+              </div>
+            </div>
 
-      <!-- Task List Section -->
-      <section class="task-list-section">
-        <div id="taskList" class="task-list">
-          <!-- Tasks will be dynamically added here -->
-        </div>
+            <button id="addTaskBtn" class="btn btn-primary btn-add">
+              <svg
+                class="btn-svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <span class="btn-text">Add Task</span>
+            </button>
+          </div>
+        </section>
 
-        <!-- Empty State -->
-        <div id="emptyState" class="empty-state">
-          <div class="empty-icon">📝</div>
-          <h3 class="empty-title">No tasks yet</h3>
-          <p class="empty-message">
-            Add a task to get started with your productivity journey
-          </p>
-        </div>
-      </section>
+        <!-- Task List Section (Right Column) -->
+        <section class="task-list-section">
+          <!-- Header with Title and Controls -->
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="section-icon">📌</span>
+              Your Tasks
+            </h2>
+            <div class="header-controls">
+              <div class="search-container">
+                <svg
+                  class="search-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
+                </svg>
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="search-input"
+                  placeholder="Search tasks..."
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter & Sort Section -->
+          <div class="filter-sort-container">
+            <div class="filter-container">
+              <button class="filter-btn active" data-filter="all">
+                <div class="filter-btn-left">
+                  <span class="filter-icon">📋</span>
+                  All
+                </div>
+                <span class="count" id="countAll">0</span>
+              </button>
+              <button class="filter-btn" data-filter="active">
+                <div class="filter-btn-left">
+                  <span class="filter-icon">🔄</span>
+                  Active
+                </div>
+                <span class="count" id="countActive">0</span>
+              </button>
+              <button class="filter-btn" data-filter="completed">
+                <div class="filter-btn-left">
+                  <span class="filter-icon">✓</span>
+                  Completed
+                </div>
+                <span class="count" id="countCompleted">0</span>
+              </button>
+            </div>
+
+            <div class="sort-container">
+              <select id="sortSelect" class="sort-select">
+                <option value="date-desc">Newest First</option>
+                <option value="date-asc">Oldest First</option>
+                <option value="priority-desc">High Priority First</option>
+                <option value="priority-asc">Low Priority First</option>
+                <option value="name-asc">A to Z</option>
+                <option value="name-desc">Z to A</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="taskList" class="task-list">
+            <!-- Tasks will be dynamically added here -->
+          </div>
+
+          <!-- Empty State -->
+          <div id="emptyState" class="empty-state show">
+            <div class="empty-illustration">
+              <svg viewBox="0 0 200 200" fill="none">
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  opacity="0.2"
+                />
+                <path
+                  d="M60 100 L85 125 L140 70"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="empty-title">No tasks found</h3>
+            <p class="empty-message">
+              Create your first task and start organizing your day like a pro!
+            </p>
+          </div>
+        </section>
+      </div>
 
       <!-- Actions Section -->
       <section class="actions-section">
-        <button id="clearCompletedBtn" class="btn btn-secondary">
+        <button id="clearCompletedBtn" class="btn btn-danger">
+          <svg
+            class="btn-svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="3 6 5 6 21 6" />
+            <path
+              d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+            />
+          </svg>
           Clear Completed
         </button>
-        <div class="stats">
-          <span id="taskStats">0 tasks remaining</span>
+        <button id="deleteAllBtn" class="btn btn-secondary">
+          <svg
+            class="btn-svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+          Delete All Tasks
+        </button>
+        <div class="stats-text">
+          <span id="taskStats" class="task-stats-text">0 tasks remaining</span>
         </div>
       </section>
     </main>
 
     <!-- Edit Modal -->
     <div id="editModal" class="modal">
+      <div class="modal-overlay"></div>
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Edit Task</h2>
-          <button class="modal-close" id="closeModal">&times;</button>
+          <h2 class="modal-title">
+            <span class="modal-icon">✏️</span>
+            Edit Task
+          </h2>
+          <button class="modal-close" id="closeModal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
         </div>
         <div class="modal-body">
-          <input
-            type="text"
-            id="editTaskInput"
-            class="task-input"
-            placeholder="Task description..."
-          />
+          <div class="form-group">
+            <label class="form-label">Task Description</label>
+            <input
+              type="text"
+              id="editTaskInput"
+              class="task-input"
+              placeholder="Enter task description..."
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Priority Level</label>
+            <div class="priority-options">
+              <button
+                class="priority-btn"
+                data-priority="low"
+                id="editPriorityLow"
+              >
+                <span class="priority-dot priority-low"></span>
+                Low
+              </button>
+              <button
+                class="priority-btn"
+                data-priority="medium"
+                id="editPriorityMedium"
+              >
+                <span class="priority-dot priority-medium"></span>
+                Medium
+              </button>
+              <button
+                class="priority-btn"
+                data-priority="high"
+                id="editPriorityHigh"
+              >
+                <span class="priority-dot priority-high"></span>
+                High
+              </button>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
-          <button id="cancelEditBtn" class="btn btn-secondary">Cancel</button>
-          <button id="saveEditBtn" class="btn btn-primary">Save Changes</button>
+          <button id="cancelEditBtn" class="btn btn-secondary">
+            <svg
+              class="btn-svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+            Cancel
+          </button>
+          <button id="saveEditBtn" class="btn btn-primary">
+            <svg
+              class="btn-svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Save Changes
+          </button>
         </div>
       </div>
     </div>
