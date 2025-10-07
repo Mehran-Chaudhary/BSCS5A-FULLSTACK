@@ -1,5 +1,6 @@
 function task1() {
-  var fullName = "Ahmad Hassan";
+  var fullName = "Mehran";
+  var registrationId = "232433";
   var age = 20;
   var isStudent = true;
   var gpa = 3.85;
@@ -7,6 +8,7 @@ function task1() {
 
   var biography = {
     name: fullName,
+    registrationId: registrationId,
     age: age,
     isStudent: isStudent,
     gpa: gpa,
@@ -18,14 +20,15 @@ function task1() {
     },
     degreeProgram: {
       current: "Bachelor of Science in Computer Science",
+      class: "BSCS 5A",
       semester: "5th Semester",
-      university: "Air University",
+      university: "AIR University",
       expectedGraduation: "2027",
     },
     contact: {
-      email: "ahmad.hassan@student.au.edu.pk",
+      email: "mehran.232433@student.au.edu.pk",
       phone: "+92-300-1234567",
-      linkedin: "linkedin.com/in/ahmad-hassan",
+      linkedin: "linkedin.com/in/mehran-232433",
     },
     skills: ["JavaScript", "Python", "HTML/CSS", "React", "Node.js"],
     hobbies: hobbies,
@@ -34,6 +37,7 @@ function task1() {
   let output = "";
   output += "=== PERSONAL BIOGRAPHY ===\n\n";
   output += `Name: ${biography.name}\n`;
+  output += `Registration ID: ${biography.registrationId}\n`;
   output += `Age: ${biography.age} years old\n`;
   output += `Student Status: ${
     biography.isStudent ? "Active Student" : "Not a Student"
@@ -47,6 +51,7 @@ function task1() {
 
   output += "🎓 DEGREE PROGRAM:\n";
   output += `Program: ${biography.degreeProgram.current}\n`;
+  output += `Class: ${biography.degreeProgram.class}\n`;
   output += `Current: ${biography.degreeProgram.semester}\n`;
   output += `University: ${biography.degreeProgram.university}\n`;
   output += `Expected Graduation: ${biography.degreeProgram.expectedGraduation}\n\n`;
@@ -64,6 +69,7 @@ function task1() {
   console.log("=== Task 1: Biography ===");
   console.log("Variables used:");
   console.log("fullName (string):", fullName);
+  console.log("registrationId (string):", registrationId);
   console.log("age (number):", age);
   console.log("isStudent (boolean):", isStudent);
   console.log("gpa (number):", gpa);

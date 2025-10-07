@@ -129,9 +129,12 @@ By completing these tasks, students will understand:
 
 ## 🎓 Academic Context
 
+**Student**: Mehran  
+**Registration ID**: 232433  
+**Class**: BSCS 5A  
 **Course**: Full Stack Web Development  
 **Semester**: 5th Semester BSCS  
-**Institution**: Air University, Islamabad  
+**Institution**: AIR University, Islamabad  
 **Focus**: JavaScript Fundamentals and Problem Solving
 
 ---
