@@ -1,0 +1,82 @@
+.language-card {
+  background: linear-gradient(
+    135deg,
+    rgba(236, 72, 153, 0.05) 0%,
+    rgba(219, 39, 119, 0.05) 100%
+  );
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.language-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.language-icon {
+  color: white;
+  font-size: 1.75rem;
+}
+
+.language-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.language-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.language-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.language-level {
+  font-size: 0.875rem;
+  color: #ec4899;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .language-card {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .language-list {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .language-item {
+    flex: 1;
+    min-width: 120px;
+    align-items: center;
+  }
+}

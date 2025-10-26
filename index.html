@@ -45,9 +45,22 @@
 
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 25px;
         margin-bottom: 40px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       .project-card {
@@ -175,10 +188,31 @@
             smart filtering, and persistent storage for efficient productivity.
           </p>
         </a>
+
+        <a href="CV-REACT/dist/" class="project-card">
+          <span class="badge">⚛️ React</span>
+          <span class="project-icon">👨‍💻</span>
+          <h2 class="project-title">React CV Website</h2>
+          <p class="project-description">
+            Modern CV built with React + Vite featuring component-based
+            architecture, smooth animations, and glassmorphism design using
+            props.
+          </p>
+        </a>
+
+        <a href="ECOMMERCE/dist/" class="project-card">
+          <span class="badge">⚛️ React</span>
+          <span class="project-icon">🛒</span>
+          <h2 class="project-title">TechStore E-Commerce</h2>
+          <p class="project-description">
+            Full-featured e-commerce store with React Router, shopping cart,
+            product filtering, checkout flow, and Tailwind CSS styling.
+          </p>
+        </a>
       </div>
 
       <footer class="footer">
-        <p>Built with HTML5, CSS3 & JavaScript • GitHub Pages Ready</p>
+        <p>Built with HTML5, CSS3, JavaScript & React • GitHub Pages Ready</p>
       </footer>
     </div>
   </body>

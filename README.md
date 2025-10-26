@@ -22,11 +22,13 @@ This repository serves as a complete collection of academic work, practical proj
 
 ```
 BSCS5A - FULLSTACK LAB TASKS/
-├── 📊 CV/                          # Professional CV Website
+├── 📊 CV/                          # Professional CV Website (HTML/CSS)
 ├── 🧮 CALCULATOR/                  # Professional Calculator App
 ├── 📅 TIMETABLE/                   # Interactive Class Schedule
 ├── ⚡ JS-LAB-TASKS/                # JavaScript Programming Exercises
 ├── ✅ TASK-MANAGER/                # Task Management System
+├── ⚛️ CV-REACT/                    # React CV with Component Architecture
+├── 🛒 ECOMMERCE/                   # React E-Commerce Store (TechStore)
 ├── 📋 README.md                    # This documentation
 └── 🔧 Additional Projects          # Future lab tasks & assignments
 ```
@@ -172,6 +174,87 @@ BSCS5A - FULLSTACK LAB TASKS/
 - Empty state handling
 - Confirmation dialogs
 
+---
+
+### 6. ⚛️ **React CV Website**
+
+**Tech Stack**: React 18, Vite, Framer Motion, React Icons  
+**Purpose**: Component-based CV demonstrating React props and architecture
+
+**Features:**
+
+- Reusable React components (Header, ExperienceCard, ProjectCard, etc.)
+- Props-driven content flow
+- Smooth scroll animations with Framer Motion
+- Glassmorphism design aesthetic
+- Modern gradient backgrounds
+- Print-friendly CSS
+- Fully responsive mobile-first design
+
+**Component Architecture:**
+
+- Header with contact information
+- ExperienceSection with experience cards
+- ProjectSection with project showcases
+- EducationSection with degree information
+- SkillsSection with categorized skills
+- LanguageSection for language proficiency
+
+**Technical Highlights:**
+
+- Centralized data management
+- Component composition patterns
+- Animation on scroll
+- Professional icon library integration
+- Fast Vite build system
+- Production-ready deployment
+
+---
+
+### 7. 🛒 **TechStore E-Commerce**
+
+**Tech Stack**: React 18, Vite, Tailwind CSS v4, React Router, Framer Motion  
+**Purpose**: Full-featured e-commerce store UI with modern design
+
+**Features:**
+
+- 24+ tech products across 11 categories
+- Advanced product filtering (category, price, stock)
+- Real-time search functionality
+- Shopping cart with quantity controls
+- Product detail pages with image galleries
+- Complete checkout flow UI
+- Persistent cart with localStorage
+- Responsive mobile-first design
+
+**Pages & Routing:**
+
+- Homepage with hero and featured products
+- Products page with filters and search
+- Individual product detail pages
+- Shopping cart with order summary
+- Multi-step checkout process
+- Order confirmation flow
+
+**Component Props Examples:**
+
+- Navbar with cart count and search
+- ProductCard with product data
+- FilterSidebar with filter state
+- CartItem with quantity controls
+- Hero with customizable content
+
+**Technical Highlights:**
+
+- React Router for navigation
+- Centralized state management
+- Local storage persistence
+- Form validation
+- Tailwind CSS utility-first styling
+- Framer Motion animations
+- Professional UI/UX patterns
+- Loading and empty states
+
 ## 🎓 Academic Information
 
 ### 📖 Current Semester Subjects
@@ -200,6 +283,9 @@ BSCS5A - FULLSTACK LAB TASKS/
 - **HTML5**: Semantic markup, accessibility, SEO optimization
 - **CSS3**: Modern styling, Grid, Flexbox, animations, responsive design
 - **JavaScript**: ES6+, DOM manipulation, event handling, OOP
+- **React**: Component architecture, props, state management, hooks
+- **Tailwind CSS**: Utility-first styling, responsive design
+- **Vite**: Modern build tool and development server
 
 ### Design & UX
 
